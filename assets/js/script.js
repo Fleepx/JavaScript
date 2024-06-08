@@ -1,8 +1,21 @@
-var cartCount = document.querySelector('#cart-count');
+var cartCount = document.querySelector('#cart-count'); //Etiqueta para Contador
+var montoTotal = document.querySelector('#totalPagar'); //Etiqueeta para Monto Total
 let cantidad = 0;
 let totalPagar = 0;
 
-document.querySelector(".precio").innerHTML = precioBase;
-document.querySelector(".cantidad").innerHTML = cantidad;
-document.querySelector("#totalPagar").innerHTML = totalPagar;
-
+function incrementar(precio) { //Formula para incrementar la cantidad y el precio
+    if (cantidad < 99) {
+        cantidad++;
+        cartCount.textContent = cantidad;
+        totalPagar +=precio;
+        montoTotal.textContent = totalPagar;
+    }
+}
+function disminuir(precio) { //Formula para disminuir la cantidad y el precio
+    if (cantidad > 0) {
+        cantidad--;
+        cartCount.textContent = cantidad;
+        totalPagar -=precio;
+        montoTotal.textContent = totalPagar;
+    }
+}

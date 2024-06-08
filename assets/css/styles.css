@@ -98,7 +98,7 @@ header {
     color: var(--amarillo);
 }
 #cart-count {
-    position: fixed;
+    position:absolute;
     right: 255px;
     top: 30px;
     background-color: red;
