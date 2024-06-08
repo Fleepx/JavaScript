@@ -1,13 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/js/script.js">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave Emporium</title>
+    <!--GoogleFonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Nova+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Licorice&family=Notable&family=Nova+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Stencil+One&family=Vast+Shadow&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Capriola&family=Licorice&family=Mogra&family=Notable&family=Nova+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Stencil+One&family=Vast+Shadow&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Capriola&family=Licorice&family=Mogra&family=Notable&family=Nova+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Stencil+One&family=Trade+Winds&family=Vast+Shadow&display=swap" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="./assets/imgs/favicon.png" type="image/x-icon">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/76066ff5d0.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+  </head>
+  <body>
+    <div class="grid-container">
+    <!--HEADER DE LA TIENDA CON LOGO-->
+      <header>
+        <div class="tienda">
+
+          <div class="hero">
+            <div class="logo-tienda">
+              <img id="Soundwave" src="./assets/imgs/BIGmusic.png" alt="IconoPagina">
+              <div class="nombre-tienda">
+                <h1 id="nombre">SoundWave</h1> <h1 class="nombre2">Emporium</h1>
+              </div>
+            </div>
+            <button class="burguer">
+              <i class="fa-solid fa-bars fa-2xl"></i>
+            </button>
+            
+            <div class="sesion">
+
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+                    <span id="cart-count">0</span>
+                    <h5 id="total">Total a pagar <span id="totalPagar">0</span></h5>
+                </div>
+
+
+              
+              <button id="login">
+                Iniciar Sesión
+              </button>
+              <button id="register">
+                Registrarse
+              </button>
+            </div>
+          </div>
+
+          <nav>
+            <div id="filtro">
+              <label for="Marcas">Ordenar por marca</label>
+              <select name="Marcas" id="Marcas">
+                <option value="Todo">Todo</option>
+                <option value="HP">HP</option>
+                <option value="Dell">Dell</option>
+                <option value="JBL">JBL</option>
+                <option value="RGB">RGB</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Soundcore">Soundcore</option>
+                <option value="Headphones">Headphones</option>
+              </select>
+            </div>
+          </nav>
+
+        </div>
+      </header> 
+
+
+        <!--BARRA DE NAVEGACION-->
+      <menu>
+        <aside>
+          <ul id="menu">
+            
+            <h3 id="categorias">Categorias</h3>
+            <hr>
+            <a href="./index.html" class="list-item"><li>Todo <span>(105)</span></li></a>
+            <a href="./index.html" class="list-item"><li>HP <span>(15)</span></li></a>
+            <a href="./index.html" class="list-item"><li>Dell <span>(10)</span></li></a>
+            <a href="./index.html" class="list-item"><li>JBL <span>(20)</span></li></a>
+            <a href="./index.html" class="list-item"><li>RGB <span>(12)</span></li></a>
+            <a href="./index.html" class="list-item"><li>Samsung <span>(8)</span></li></a>
+            <a href="./index.html" class="list-item"><li>Soundcore <span>(22)</span></li></a>
+            <a href="./index.html" class="list-item"><li>Headphones <span>(6)</span></li></a>
+        </ul>
+        <div class="anuncio">
+          <h3 class="ofertas">
+            ¡Revisa nuestras Ofertas!
+          </h3>
+        </div>
+        </aside>
+      </menu>
+
+    <!--CONTENIDO PRINCIPAL-->
+      <main>
+        <div class="articulos">
+          <figure class="card">
+            <div class="img">
+              <img src="./assets/imgs/P-DEDIGE.webp" alt="Parlante-DEIGE" />
+            </div>
+            <figcaption>
+              <h1 class="Parlante">DEIGE</h1>
+              <h3 class="descripcion">Altavoces 3D con cable subwoofer</h3>
+            <p class="ID">ID 265153</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i>
+              <div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$43.513</h2>
+            </div>
+            
+
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-Dell.webp" alt="Parlante-Dell" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">DELL</h1>
+            <h3 class="descripcion">Multimedia Reacondicionado PC</h3>
+            <p class="ID">ID 15877</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$9.990</h2>
+            </div>
+            
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-Flip-6-Negro.jpg" alt="Parlante-Flip6" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">JBL</h1>
+            <h3 class="descripcion">FLip 6 Negro</h3>
+            <p class="ID">ID 700459</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$109.990</h2>
+            </div>
+            
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img
+            src="./assets/imgs/P-Genius-Hf180.jpg"
+            alt="Parlante-Genius-Hf180"
+            />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">Genius Sp</h1>
+            <h3 class="descripcion">Hf180 6w Wood Color Madera</h3>
+            <p class="ID">ID 23540</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$9.302</h2>
+            </div>
+            
+            
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img
+            src="./assets/imgs/P-HP-RGB-DHE-6000.avif"
+            alt="Parlante-HP-DHE6000"
+            />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">HP</h1>
+            <h3 class="descripcion">RGB DHE-6000 Jack 3,5mm + USB</h3>
+            <p class="ID">ID 1126464</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$7.870</h2>
+            </div>
+
+            
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-Rockwood.jpg" alt="Parlante-Rockwood" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">Blik</h1>
+            <h3 class="descripcion">Parlante Rockwood</h3>
+            <p class="ID">ID 1PA05167</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$16.990</h2>
+            </div>
+
+            
+          </figcaption>
+        </figure>
+        <figure class="card">
+          <div class="img">
+            <img src="./assets/imgs/P-HP-DHS-2101.jpg" alt="Parlante-DHS2101" />
+          </div>
+          <figcaption>
+            <h1 class="Parlante">HP</h1>
+            <h3 class="descripcion">Parlante Pc DHS-2101 Gamer</h3>
+            <p class="ID">ID 48336</p>
+            <div class="compra">
+              <i class="fa-regular fa-share-from-square"></i><div class="cart"><button onclick="cantidad = cantidad + 1;" class="mas">+</button> <button onclick="cantidad = cantidad - 1;"" class="menos">-</button></div>
+              <h2 class="precio">$14.990</h2>
+            </div>
+
+          </figcaption>
+        </figure>
+      </div>
+      <div class="difuminado-superior"></div>
+      <div class="difuminado-inferior"></div>
+    </main>
+
+
+
+    <!--PIE DE PAGINA-->
+    <footer>
+      <div class="pie">
+        <div class="datos">
+          <p>SoundWave Emporium®</p>
+          <p>Todos los derechos reservados</p>
+          <p><i class="fa-solid fa-location-dot fa-2xs"></i> Av. Grecia 150,</p>
+          <p>Ñuñoa Chile</p>
+        </div>
+        <div class="social">
+          <i class="fa-brands fa-facebook" style="color: rgb(5, 5, 192);"></i>
+          <i class="fa-brands fa-twitter" style="color: rgb(36, 212, 212);"></i>
+          <i class="fa-brands fa-instagram" style="color: blueviolet;"></i>
+          <i class="fa-brands fa-tiktok" style="color: black;"></i>
+        </div>
+      </div>
+      
+    </footer>
+  </div>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
