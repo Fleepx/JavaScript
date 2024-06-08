@@ -96,10 +96,11 @@ header {
 }
 .fa-cart-shopping {
     color: var(--amarillo);
+    text-align: right;
 }
 #cart-count {
-    position:absolute;
-    right: 255px;
+    position:fixed;
+    right: 60px;
     top: 30px;
     background-color: red;
     color: white;
@@ -109,6 +110,8 @@ header {
 }
 #total {
     color: var(--fuente);
+    text-align: right;
+    font-size: 18px;
 }
 #login, #register, .fa-cart-shopping, #cart-count {
     cursor: pointer;
@@ -121,10 +124,6 @@ header {
 select {
     width: 11rem;
 }
-.sesion {
-    display: none;
-}
-
 /*MENU DE NAVEGACION */
 #filtro  {
     color: var(--fuente);
